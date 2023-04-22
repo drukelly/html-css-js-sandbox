@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 100 1em/1 monospace;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  font: 16pt/1.33 'VT323', monospace;
+  margin-bottom: 0;
+}
+
+input,
+button {
+  /* border-radius: 20px; */
+  border: 1px solid;
+  font: normal 14pt/1 'VT323', monospace;
+  font-weight: bold;
+  padding: 10px 8px;
+}
+
+form {
+  display: flex;
+  gap: 10px
+}
+
+input {
+  width: 100%;
+}
+
+#results {
+  padding: 10px 5px;
+}
+
+.movie {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+
+.movie:last-child {
+  border-bottom: none;
+}
+
+#pagination {
+  display: flex;
+  text-align: center;
+  padding: 10px 5px 15px;
+}
+
+#pagination a {
+  text-decoration: none;
+  padding-right: .5rem;
+}
+
+#pagination a.active {
+  color: gray;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}

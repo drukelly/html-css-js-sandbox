@@ -1,0 +1,27 @@
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* Tablet: Portrait */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    background-color: green;
+  }
+}
+
+/* Tablet: Landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background-color: purple;
+  }
+}
+
+/* Mobile: Portrait */
+@media screen and (max-width: 479px) and (orientation: portrait) {
+  body {
+    background-color: blue;
+  }
+}
