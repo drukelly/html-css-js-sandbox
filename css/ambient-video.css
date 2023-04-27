@@ -49,9 +49,10 @@ a {
   text-decoration: none;
 }
 
-video {
+/* Debugging Border */
+/* video {
   border: 1px solid red;
-}
+} */
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
