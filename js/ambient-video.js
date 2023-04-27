@@ -29,3 +29,6 @@ const detectElements = () => {
 window.onload = () => {
   detectElements();
 };
+
+// Run detectElements on scroll
+window.addEventListener('scroll', detectElements, false);
