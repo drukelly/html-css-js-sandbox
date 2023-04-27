@@ -1,4 +1,4 @@
-// 
+// Logic to draw boundaries of video elements on the page
 const isElementInViewport = (element) => {
   const rect = element.getBoundingClientRect();
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -12,6 +12,7 @@ const isElementInViewport = (element) => {
   );
 };
 
+// Logic to play/pause video elements on the page
 const detectElements = () => {
   const videosOnPage = document.querySelectorAll('video');
   const videosObjects = Array.from(videosOnPage);
@@ -24,8 +25,7 @@ const detectElements = () => {
   });
 };
 
+// Run detectElements on page load
 window.onload = () => {
   detectElements();
 };
-
-window.addEventListener('scroll', detectElements, false);
