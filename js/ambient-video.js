@@ -18,9 +18,22 @@ const detectElements = () => {
   const videosObjects = Array.from(videosOnPage);
   videosObjects.forEach((video) => {
     if (isElementInViewport(video)) {
-      video.play();
+      // https://developer.chrome.com/blog/play-request-was-interrupted/
+      let playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {
+          video.pause();
+        })
+          .catch(error => {
+            console.log(error);
+          });
+        video.classList.add('animate-on');
+        video.classList.remove('animate-away');
+      }
     } else {
       video.pause();
+      video.classList.add('animate-away');
+      video.classList.remove('animate-on');
     }
   });
 };
