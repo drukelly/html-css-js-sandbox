@@ -89,6 +89,10 @@ a {
     width: 380px;
     height: 340px;
   }
+  section > div {
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
 }
 
 /* Tablet: Landscape */
