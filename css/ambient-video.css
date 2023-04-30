@@ -1,15 +1,11 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font: 100 18px/1 "Arial Nova", sans-serif;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 2em;
+  font: 400 18px/1 "Adobe Clean", Arial, sans-serif;
 }
 
 h2 {
@@ -18,21 +14,46 @@ h2 {
   margin: 0;
 }
 
-section {
+section > div {
   align-items: center;
+  color: white;
   display: flex;
   flex-grow: 1;
   gap: 2em;
   justify-content: space-evenly;
-  margin-bottom: 5em;
+  padding: 0 2em;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-section:nth-child(even) {
+section:nth-child(even) > div {
   flex-direction: row-reverse;
+}
+
+section:nth-child(1) {
+  background-color: #3B8698;
+}
+
+section:nth-child(2) {
+  background-color: #626FA8;
+}
+
+section:nth-child(3) {
+  background-color: #262626;
+}
+
+section:nth-child(4) {
+  background-color: #EE8131;
+}
+
+section:nth-child(5) {
+  background-color: #060814;
 }
 
 p {
   line-height: 1.5;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 a {
@@ -86,9 +107,11 @@ a {
   h2 {
     font-size: 1.75em;
   }
-  section,
-  section:nth-child(even) {
+  section > div,
+  section:nth-child(even) > div {
     flex-direction: column-reverse;
+    padding-bottom: 2em;
+    padding-top: 2em;
   }
   video {
     object-fit: fill;
@@ -123,21 +146,17 @@ a {
 @keyframes fadeIn {
   0% {
     opacity: .4;
-    transform: translateY(-10px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 @keyframes fadeOut {
   0% {
     opacity: 1;
-    transform: translateY(0);
   }
   100% {
-    transform: translateY(-10px);
     opacity: .4;
   }
 }
