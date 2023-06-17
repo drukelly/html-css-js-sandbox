@@ -10,7 +10,7 @@
 
 body {
   align-items: center;
-  background-color: rgba(38, 42, 40, 1);
+  background-color: rgb(38, 42, 40);
   color: white;
   display: flex;
   font: 300 14px/1 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -25,13 +25,16 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: calc(866px / 2);
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
   width: calc(688px / 2);
 }
 
 .display {
   color: white;
-  font-size: 4em;
+  font-size: 3.5em;
   height: 88px;
+  letter-spacing: -0.5pt;
   line-height: 88px;
   padding: 0 20px;
   text-align: right;
@@ -42,8 +45,8 @@ body {
 }
 
 button {
-  background: rgba(118, 119, 119, 1);
-  border: 0.1px solid rgba(73, 75, 75, 1);
+  background: rgb(118, 119, 119);
+  border: 0.1px solid rgb(73, 75, 75);
   color: inherit;
   cursor: pointer;
   font: 200 2em/1 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -74,4 +77,30 @@ button:hover {
 
 .calculator .row:last-child button:last-child {
   border-bottom-right-radius: var(--border-radius);
+}
+
+nav {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+nav a {
+  border-radius: 100%;
+  height: 14px;
+  width: 14px;
+  margin: 0 8px 0 0;
+}
+
+nav a:first-child {
+  background: rgb(237, 105, 94);
+}
+
+nav a:nth-child(2) {
+  background: rgb(245, 190, 78);
+}
+
+nav a:last-child {
+  background: rgb(97, 197, 84);
 }
